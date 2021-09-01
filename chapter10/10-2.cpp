@@ -44,7 +44,7 @@ void LongLongInt::add(const LongLongInt &n1, const LongLongInt &n2) {
     int minLen = (len1 > len2 ? len2 : len1);
     int len = (len1 > len2 ? len1 : len2) + 1;
     int carry = 0, result;                             // carry:进位
-    num = new char[len + 1];
+    num = new char[len + 1]; // 这边第二次加1是因为最高位可能有进位，以及'\0'
     int i;
     for (i = 0; i < minLen; ++i) {
         result = n1.num[i] - '0' + n2.num[i] - '0' + carry;
@@ -67,20 +67,19 @@ void LongLongInt::add(const LongLongInt &n1, const LongLongInt &n2) {
         num[i++] = carry + '0';
     num[i] = '\0';
 
-    if(i != len){
-        char *tmp = num;
-        num = new char[len];
-        strcpy(num, tmp);
-        delete tmp;
-    }
+//    if(i != len){  我觉得这部分没有存在的意义，已验证
+//        char *tmp = num;
+//        num = new char[len];
+//        strcpy(num, tmp);
+//        delete tmp;
+//    }
 }
 
 int main(){
-    LongLongInt n1("123");
+    LongLongInt n1("1233");
     LongLongInt n2("1423");
     LongLongInt n;
     n.add(n1, n2);
     n.print();
-    cout << '\0' << endl;
     return 0;
 }
