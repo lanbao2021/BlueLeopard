@@ -42,3 +42,4 @@ add_executable(6-8 chapter6/6-8.cpp)
 add_executable(6-21 chapter6/6-21.cpp)
 
 add_executable(10-2 chapter10/10-2.cpp)
+add_executable(10-3 chapter10/10-3.cpp)
