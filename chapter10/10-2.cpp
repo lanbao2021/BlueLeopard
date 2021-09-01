@@ -34,7 +34,7 @@ LongLongInt::LongLongInt(const LongLongInt &other) {
 }
 
 void LongLongInt::print() const {
-    for (int i = strlen(num); i >= 0; --i)
+    for (int i = strlen(num)-1; i >= 0; --i) // strlen(num)-1才是输出最后一位数字
         cout << num[i];
     if (strlen(num) == 0)
         cout << 0;
