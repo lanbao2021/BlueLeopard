@@ -113,16 +113,46 @@ void LongLongInt::assign(const LongLongInt &right) {
     copy(right);
 }
 
+int LongLongInt::compare(const Node *n1, const Node *n2) const {
+    int result;
+    if(n1 != NULL && n2 != NULL){
+        result = compare(n1->next, n2->next);
+        if(result != 0)
+            return result;
+        if(n1->data > n2->data)
+            return 1;
+        if(n1->data < n2->data)
+            return -1;
+        return 0;
+    }
+    if(n1 == NULL && n2 == NULL)
+        return 0;
+    if(n1 != NULL && n2 == NULL)
+        return 1;
+    if(n1 == NULL && n2 != NULL)
+        return -1;
+}
 
+bool LongLongInt::equal(const LongLongInt &n) const {
+    return compare(num->next, n.num->next) == 0;
+}
 
+bool LongLongInt::greater(const LongLongInt &n) const{
+    return compare(num->next, n.num->next) == 1;
+}
 
+bool LongLongInt::greaterOrEqual(const LongLongInt &n) const {
+    return compare(num->next, n.num->next) >= 0;
+}
 
-
-
-
-
+// 析构函数先调用remove函数清空单链表，再释放头节点
+LongLongInt::~LongLongInt() {
+    remove();
+    delete num;
+}
 
 int main(){
+
     return 0;
 }
 
