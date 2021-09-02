@@ -26,7 +26,7 @@ char *Label::GetNextLabel() {
         noChar[1] = '\0';
     }
     else{
-        for(i = 9; tmpNo != 0; --i, tmpNo /= 10)
+        for(i = 9; tmpNo != 0; --i, tmpNo /= 10) // 这一段真的不知道想表达啥
             noChar[i] = tmpNo % 10 + '0';
         for(j = 0, ++i; i<10; ++i, ++j)
             noChar[j] = noChar[i];
