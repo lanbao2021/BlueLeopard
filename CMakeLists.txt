@@ -53,3 +53,5 @@ add_executable(Rational chapter10/Rational/Rational.cpp chapter10/Rational/Ratio
 add_executable(10-12 chapter10/10-12.cpp)
 add_executable(10-13 chapter10/10-13.cpp)
 add_executable(10-14 chapter10/10-14.cpp)
+add_executable(Rational_Operator textbook/chapter11-operator/Rational_Operator.cpp textbook/chapter11-operator/Rational_Operator.h)
+add_executable(main_operator textbook/chapter11-operator/main_operator.cpp)
