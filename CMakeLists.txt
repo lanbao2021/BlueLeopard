@@ -57,3 +57,5 @@ add_executable(Rational_Operator textbook/chapter11-operator/Rational_Operator.c
 add_executable(main_operator textbook/chapter11-operator/main_Rational.cpp)
 add_executable(DoubleArray_Operator textbook/chapter11-operator/DoubleArray_Operator.cpp textbook/chapter11-operator/DoubleArray_Operator.h)
 add_executable(main_DoubleArray textbook/chapter11-operator/main_DoubleArray.cpp)
+add_executable(11-1 chapter11/11-1.cpp)
+add_executable(11-2 chapter11/11-2.cpp)
