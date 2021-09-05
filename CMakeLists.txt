@@ -59,3 +59,5 @@ add_executable(DoubleArray_Operator textbook/chapter11-operator/DoubleArray_Oper
 add_executable(main_DoubleArray textbook/chapter11-operator/main_DoubleArray.cpp)
 add_executable(11-1 chapter11/11-1.cpp)
 add_executable(11-2 chapter11/11-2.cpp)
+add_executable(11-3 chapter11/11-3.cpp)
+add_executable(11-4 chapter11/11-4.cpp)
