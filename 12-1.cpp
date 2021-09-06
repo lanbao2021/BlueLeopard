@@ -65,7 +65,7 @@ Point Segment::getMid() const {
     return Point((start.getx() + end.getx())/2, (start.gety() + end.gety())/2 );
 }
 
-
+// Triangle类现在不想写
 
 int main(){
     Point p1(1,1), p2(3,3);
