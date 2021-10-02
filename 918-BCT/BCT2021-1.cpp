@@ -3,7 +3,14 @@
 // page70, 第4章，循环程序设计-枚举法
 // ABCD*E = DCBA，求ABCDE这5个不同数字
 // 特别注意，是5个不同的数字
-
+/*
+1. 想清楚ABCD的取值范围，想清楚E的取值范围
+2. 如何通过ABCD得到A，B，C，D呢？比如1234要得到1，2，3，4
+3. D能否为零？A、B、C、D之间能否相等？
+4. 如何通过A，B，C，D得到DCBA?
+5. 想清楚为什么E≠1
+6. E能否和A、B、C、D中的任意一个数字相等？
+*/
 #include <iostream>
 using namespace std;
 
